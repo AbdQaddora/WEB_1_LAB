@@ -1,0 +1,116 @@
+/* import google font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/** GLOBAL STYLE */
+/* for normalize */
+/*
+Using CSS normalization or resets is important for several reasons:
+
+Cross-Browser Consistency: Different web browsers have different default styles for HTML elements. This can lead to inconsistent rendering of web pages across browsers. CSS normalization or resets help ensure that the starting point for styling is consistent across browsers, reducing the need for browser-specific fixes.
+
+Predictable Layouts: When you reset or normalize styles, you have more control over how elements are displayed. This can make it easier to create layouts that behave consistently across different browsers and devices.
+
+Reduced Styling Surprises: Without normalization or resets, you may encounter unexpected styling behaviors due to browser defaults. For example, different default font sizes, margins, or padding can lead to unwanted spacing or text size variations.
+
+Improved Maintainability: By starting with a consistent baseline, your CSS code becomes more maintainable. You can write styles with the confidence that they won't be unexpectedly overridden by browser defaults.
+
+Customization: With a reset or normalization in place, you can customize styles more easily. You build styles from the ground up, choosing exactly how elements should look and behave, rather than trying to override existing browser defaults.
+
+Performance: In some cases, resets can lead to improved performance because you're not relying on as many default styles provided by the browser. This can be particularly important for web applications where performance is critical.
+
+Accessibility: Resetting or normalizing styles can help improve the accessibility of your website. It ensures that elements like headings, lists, and form controls have consistent styling and behavior, making it easier for users with disabilities to navigate and interact with your content
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    padding: 1rem;
+}
+
+/* the code showing in the browser */
+.code_block {
+    background-color: #1e1e1e;
+    color: #007fc4;
+    font-family: 'Consolas', 'Courier New', monospace;
+    padding: 10px;
+    border: 1px solid #333;
+    border-radius: 5px;
+    overflow-x: auto;
+    margin: 0.5rem 0rem 1rem;
+    max-height: 80dvh;
+}
+
+.code_block code {
+    font-family: 'Consolas', 'Courier New', monospace;
+}
+
+.code_block .comment {
+    color: #6A9955;
+}
+
+.week_title {
+    margin: 1rem 0rem 0rem;
+}
+
+.week_description {
+    margin: 0.5rem 0rem 1rem;
+}
+
+
+.code_title {
+    margin: 1rem 0rem 0rem;
+}
+
+.link_btn {
+    background-color: #1e1e1e;
+    color: #fff;
+    padding: 7px 14px;
+    border-radius: 2;
+    border-radius: 4px;
+    text-decoration: none;
+    cursor: pointer;
+    display: block;
+    margin: 1rem 0 0;
+    width: fit-content;
+}
+
+.output_box {
+    width: 100%;
+    margin: 1rem 0rem;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+.output_box.html_box {
+    padding: 1rem;
+}
+
+/* WEEKS PAGE */
+.weeks {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 18px;
+}
+
+.week_summary {
+    max-height: 130px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.week_card {
+    border-radius: 4px;
+    position: relative;
+    border: 1px solid #ccc;
+    padding: 1rem 1rem 4rem;
+}
+
+.week_link{
+    position: absolute;
+    bottom: 1rem;
+}
